@@ -1,0 +1,14 @@
+<null|hashmap> primes(high) {
+  <hashmap:local> res = {2};
+  
+  for(<local> i = 3; i <= high; i++) {
+    for(<local> j = 0; j < #res; j++) {
+      if(i % res[j] == 0) {
+        continue[2];
+      }
+    }
+    res[#res] = i;
+  }
+  
+  return res;
+}
